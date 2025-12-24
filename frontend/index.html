@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval';">
+  <title>AI Interviewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="chat-container" id="chat"></div>
+
+  <div class="input-container">
+    <input type="text" id="textInput" placeholder="Type your answer..." />
+    <button id="sendBtn">Send</button>
+    <button id="voiceBtn">🎤 Speak</button>
+  </div>
+
+  <script src="audioRecorder.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
