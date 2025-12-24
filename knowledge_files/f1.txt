@@ -1,0 +1,13 @@
+# Python Core Concepts: Fundamentals
+
+**CONCEPT: Virtual Environments (venv)**
+A virtual environment is a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages. Its primary purpose is to **isolate project dependencies**, ensuring one project's required libraries (e.g., NumPy v1.22) do not conflict with another project's requirements (e.g., NumPy v1.25). They are essential for clean development.
+
+**CONCEPT: Generators**
+A generator is a special type of function that returns an **iterator** that can be iterated over one item at a time. Generators **do not store the entire result in memory**; instead, they generate values on the fly using the `yield` keyword. This makes them extremely memory-efficient for working with large or infinite sequences of data.
+
+**CONCEPT: Decorators**
+A decorator is a design pattern in Python that allows a user to **add new functionality** to an existing function or class **without modifying its structure**. Decorators are typically called before the definition of a function using the `@decorator_name` syntax. They are commonly used for tasks like logging, timing function execution, or enforcing permissions.
+
+**CONCEPT: GIL (Global Interpreter Lock)**
+The Global Interpreter Lock (GIL) is a mechanism used in **CPython** (the standard Python implementation) that ensures **only one thread executes Python bytecode at any one time**. While this simplifies memory management and prevents race conditions for simple objects, it means that standard Python threads **cannot achieve true parallel execution on multi-core processors** for CPU-bound tasks.

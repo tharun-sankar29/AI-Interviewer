@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2025-11-12T10:29:16.215546",
+    "question": "You designed FastAPI APIs handling 10,000+ requests/minute for a microservices platform. What specific patterns or tools did you leverage to ensure scalability and resilience?",
+    "answer": "leveraged a cloud-native, horizontally scalable architecture using Kubernetes and asynchronous programming with FastAPI to handle the load. Resilience was ensured through service isolation, circuit breakers, and comprehensive monitoring.",
+    "evaluation": "SCORE: 9/10\nRESUME-MATCH: Excellent match, directly reflects experience and skills mentioned.\nTECH: Technically accurate and identifies key patterns and tools for scalability and resilience in a microservices context.",
+    "score": 9,
+    "is_followup": false
+  },
+  {
+    "timestamp": "2025-11-12T10:30:07.206089",
+    "question": "Can you elaborate on a complex database query optimization you performed that significantly impacted system performance or cost, detailing your approach and the tools used?",
+    "answer": "the optimization was very that i reduced the cost by 30 percent",
+    "evaluation": "SCORE: 1/10\nRESUME-MATCH: Partially aligned. The 30% cost reduction is mentioned in the resume, but the candidate fails to elaborate on the \"database query optimization\" aspect.\nTECH: Extremely poor. The response offers no technical details regarding the approach, complexity, or tools used for database query optimization. It's a mere restatement of a metric without any technical context.",
+    "score": 1,
+    "is_followup": false
+  },
+  {
+    "timestamp": "2025-11-12T10:30:58.707027",
+    "question": "Could you elaborate on a specific database optimization technique you applied, such as indexing or query refactoring?",
+    "answer": "so I have tried using rdbms for optimization technique and what indexing I use was",
+    "evaluation": "SCORE: 1/10\nRESUME-MATCH: The resume mentions \"optimization of database queries,\" but the response is too vague and incomplete to demonstrate that experience.\nTECH: The response is extremely vague and incomplete. Stating \"rdbms for optimization technique\" is redundant and poorly phrased, as RDBMS are databases. While \"indexing\" is a valid technique, the candidate fails to elaborate or provide any specific details as requested.",
+    "score": 1,
+    "is_followup": true
+  }
+]

@@ -1,0 +1,25 @@
+Software Development Concepts
+
+1. Object-Oriented Programming (OOP)
+- Encapsulation: Bundling data and methods that operate on that data within a single unit
+- Inheritance: A mechanism that allows a class to inherit properties and methods from another class
+- Polymorphism: The ability to present the same interface for different underlying forms (data types or classes)
+- Abstraction: Hiding complex implementation details and showing only necessary features of an object
+
+2. Web Development
+- Frontend: HTML, CSS, JavaScript, and frameworks like React, Angular, or Vue.js
+- Backend: Server-side technologies like Node.js, Python (Django/Flask), Java (Spring)
+- RESTful APIs: Architectural style for distributed systems, using HTTP methods
+- Databases: SQL (MySQL, PostgreSQL) and NoSQL (MongoDB, Redis)
+
+3. Software Architecture
+- Microservices: Building applications as a collection of small, independent services
+- MVC Pattern: Model-View-Controller architecture for organizing code
+- API Design: RESTful principles, versioning, authentication/authorization
+- Scalability: Horizontal vs. vertical scaling, load balancing
+
+4. Development Practices
+- Version Control: Git, branching strategies, pull requests
+- CI/CD: Continuous Integration/Continuous Deployment pipelines
+- Testing: Unit tests, integration tests, end-to-end testing
+- Agile Methodology: Scrum, sprints, daily standups

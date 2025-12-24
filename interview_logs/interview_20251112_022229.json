@@ -1,0 +1,18 @@
+[
+  {
+    "timestamp": "2025-11-12T02:23:22.606764",
+    "question": "You designed and implemented RESTful APIs using FastAPI for a microservices platform handling 10,000+ requests per minute. How did you ensure API security, versioning, and efficient data serialization for such high throughput?",
+    "answer": "We used URI-based versioning in FastAPI (/api/v1/...) and semantic versioning for backward compatibility, with deprecation warnings in headers. For service discovery, we used Kubernetes DNS internally and Istio for routing, load balancing, and retries. This enabled smooth API evolution and reliable scaling across microservices.",
+    "evaluation": "SCORE: 4/10\nMATCH: Good alignment. The candidate's answer directly relates to their resume's experience with FastAPI, 10,000+ requests/minute, and Kubernetes.\nTECH: Technically accurate for the aspects covered (URI-based and semantic versioning, Kubernetes DNS, Istio for routing/load balancing). However, it's incomplete as it entirely misses API security and efficient data serialization.\nFOLLOW-UP:\n1.  How did you specifically ensure API security, including authentication and authorization, for these high-throughput APIs?\n2.  Can you elaborate on your approach to efficient data serialization, considering the 10,000+ requests per minute requirement?",
+    "score": 4,
+    "is_followup": false
+  },
+  {
+    "timestamp": "2025-11-12T02:24:38.385496",
+    "question": "You reduced server costs by 30% through Docker containerization and database query optimization. Can you describe a specific database optimization technique you applied (e.g., indexing strategy, query refactoring) and how you measured its performance impact?",
+    "answer": "We secured APIs using **JWT authentication via Kong Gateway** and **mTLS in Istio** for encrypted inter-service communication. For performance, we used **`orjson`** and **MessagePack** for fast, compact serialization, reducing latency by about **30%** under high load.",
+    "evaluation": "SCORE: 2/10\nMATCH: Poor. The resume explicitly mentions \"optimization of database queries,\" but the candidate's response completely deviates, discussing API security (JWT, mTLS) and serialization (`orjson`, MessagePack) instead of database-specific techniques.\nTECH: The technologies mentioned (JWT, Kong Gateway, mTLS, Istio, `orjson`, MessagePack) are technically accurate and relevant to microservices architecture and performance, but they are not *database optimization techniques*, which was the core of the question. The measurement of impact (\"reducing latency by about 30%\") is stated but lacks detail on *how* it was measured.\nFOLLOW-UP: Can you describe a specific database optimization technique you applied, such as an indexing strategy or query refactoring, and how you measured its performance impact, as mentioned in your resume?",
+    "score": 2,
+    "is_followup": false
+  }
+]

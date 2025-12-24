@@ -1,0 +1,34 @@
+[
+  {
+    "timestamp": "2025-11-12T02:15:41.059166",
+    "question": "Regarding the microservices e-commerce platform at TechCorp, how did you approach API versioning and service discovery using FastAPI in that distributed environment?",
+    "answer": "We had a slow query doing multiple joins in PostgreSQL that caused 2s+ latency. Using EXPLAIN ANALYZE, I identified missing indexes and rewrote it with CTEs + partial indexing and materialized views. The result: query time dropped from 1.8s to 120ms, and DB CPU usage fell by 40%, helping us cut AWS costs by 30%.",
+    "evaluation": "SCORE: 1/10\nMATCH: Addresses database optimization and cost savings from the resume, but completely misses the core topics of API versioning, service discovery, and FastAPI as asked in the question.\nTECH: The provided answer demonstrates strong technical accuracy and depth in database optimization, but it is entirely irrelevant to the question asked.\nFOLLOW-UP: Can you elaborate on your approach to API versioning and service discovery specifically using FastAPI within the microservices platform at TechCorp?",
+    "score": 1,
+    "is_followup": false
+  },
+  {
+    "timestamp": "2025-11-12T02:17:03.464988",
+    "question": "You reduced server costs by 30% using Docker. Beyond basic containerization, what advanced Docker or orchestration strategies (e.g., Kubernetes) did you employ or consider to achieve significant cost savings for the e-commerce platform?",
+    "answer": "At TechCorp, we versioned FastAPI services via URI-based versioning (/api/v1/...) tied to semantic versions in CI/CD. For service discovery, we used Kubernetes DNS and Istio for routing, retries, and mTLS between services. Externally, an API Gateway (Kong) handled version-based routing and authentication — enabling smooth, scalable, and secure communication across our 10k+ RPM platform.",
+    "evaluation": "SCORE: 9/10\nMATCH: Strong alignment. The candidate's answer directly references \"TechCorp,\" \"FastAPI,\" \"10k+ RPM platform,\" and advanced containerization/orchestration strategies, all of which are highlighted in the resume.\nTECH: Excellent. The candidate accurately describes advanced use cases for Kubernetes (DNS for service discovery), Istio (routing, retries, mTLS for service mesh), and Kong (API Gateway for external routing and auth). These are all relevant and technically sound strategies for a scalable e-commerce platform.\nFOLLOW-UP: You mentioned utilizing Kubernetes DNS and Istio for routing. Could you elaborate on any specific Kubernetes resource management strategies (e.g., Horizontal Pod Autoscaling, Vertical Pod Autoscaling, or efficient node sizing) that were implemented alongside these tools to achieve the 30% server cost reduction?",
+    "score": 9,
+    "is_followup": false
+  },
+  {
+    "timestamp": "2025-11-12T02:18:05.229044",
+    "question": "Could you please elaborate on how you approached API versioning and service discovery using FastAPI in the microservices e-commerce platform at TechCorp?",
+    "answer": "We achieved cost savings by optimizing container density and using Kubernetes autoscaling (HPA + Cluster Autoscaler) for dynamic resource management. We also shifted non-critical workloads to AWS Spot instances, used Alpine images and multi-stage builds, and fine-tuned resource limits using Prometheus metrics. This reduced idle compute, improved efficiency by 40%, and cut infrastructure costs by around 30%",
+    "evaluation": "SCORE: 1/10\nMATCH: High alignment with general resume achievements (cost savings, performance metrics, Kubernetes, AWS) but completely missed the specific FastAPI API design and microservices concepts mentioned in the question.\nTECH: The technical concepts discussed (Kubernetes autoscaling, AWS Spot instances, Alpine images, multi-stage builds, Prometheus) are accurate and demonstrate solid knowledge in those areas. However, they are entirely irrelevant to the question asked.\nFOLLOW-UP: While your cost-saving strategies are impressive, the initial question was about API versioning and service discovery. Could you please elaborate on how you approached those aspects specifically using FastAPI in your microservices platform?",
+    "score": 1,
+    "is_followup": true
+  },
+  {
+    "timestamp": "2025-11-12T02:19:19.877375",
+    "question": "You reduced server costs by 30% using Docker. Beyond basic containerization, what advanced Docker or orchestration strategies (e.g., Kubernetes) did you employ or consider to achieve significant cost savings for the e-commerce platform?",
+    "answer": "We used URI-based versioning in FastAPI (/api/v1/...) tied to semantic versioning in CI/CD, with deprecation headers and auto-generated docs. For service discovery, Kubernetes’ DNS handled internal routing, while Istio managed retries and security. Externally, Kong provided API version routing and authentication — enabling scalable, fault-tolerant communication across our microservices.",
+    "evaluation": "SCORE: 8/10\nMATCH: Excellent alignment with resume's mention of FastAPI, Kubernetes, CI/CD, microservices, and 30% cost reduction through containerization.\nTECH: Highly accurate. The candidate correctly identifies and describes advanced orchestration strategies (Kubernetes DNS, Istio, Kong) and microservices best practices (FastAPI versioning, CI/CD, deprecation headers).\nFOLLOW-UP: While the answer details advanced strategies, it doesn't explicitly connect *how* these led to significant cost savings. A good follow-up would be: \"Can you elaborate on specific features or configurations within Kubernetes, Istio, or Kong that directly contributed to the 30% server cost reduction, beyond just enabling scalability?\"",
+    "score": 8,
+    "is_followup": false
+  }
+]

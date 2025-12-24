@@ -1,0 +1,1 @@
+phoenix project stack contains React and Django only

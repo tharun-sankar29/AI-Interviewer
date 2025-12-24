@@ -1,0 +1,18 @@
+[
+  {
+    "timestamp": "2025-11-12T10:36:25.870616",
+    "question": "Describe how you architected the FastAPI APIs to handle 10,000+ requests per minute within a microservices e-commerce platform, specifically addressing scaling and performance bottlenecks.",
+    "answer": "Well it was quite the challenge but we managed it out thanks to the current rise in use of artificial intelligence for handling out probllems,the fastapi was architected in a manner that would handle multiple services simultaneously",
+    "evaluation": "SCORE: 1/10\nRESUME-MATCH: The resume claims direct experience with FastAPI handling 10,000+ requests/minute, but the answer provides no supporting detail and contradicts the implied expertise.\nTECH: The answer is extremely vague, offers no technical details, and introduces irrelevant concepts (AI for *handling problems* in API scaling) instead of addressing architectural strategies, scaling, or performance bottlenecks. It demonstrates a complete lack of technical understanding for the specific question.",
+    "score": 1,
+    "is_followup": false
+  },
+  {
+    "timestamp": "2025-11-12T10:37:23.507194",
+    "question": "For instance, what specific load balancing strategies did you use, or how did you manage database connections and asynchronous tasks within FastAPI to support 10,000+ requests per minute?",
+    "answer": "Well it was quite the challenge but we managed it out thanks to the current rise in use of artificial intelligence for handling out probllems,the fastapi was architected in a manner that would handle multiple services simultaneously",
+    "evaluation": "SCORE: 1/10\nRESUME-MATCH: Poor. The resume explicitly states experience with FastAPI handling 10,000+ RPM and load balancing, yet the answer is completely devoid of specific strategies or technical details, directly contradicting the implied expertise.\nTECH: Very poor. The response is vague, lacks technical depth, and inappropriately uses \"artificial intelligence\" as a catch-all solution without any explanation of its application to the specific technical challenges (load balancing, DB connections, async tasks). It fails to provide any concrete technical strategies requested by the question.",
+    "score": 1,
+    "is_followup": true
+  }
+]
