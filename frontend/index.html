@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eaf0fc">
+  <title>AI Interviewer</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="candidate.css">
+</head>
+<body>
+<main class="interview-shell">
+  <header class="topbar">
+    <a class="brand" href="/observer" aria-label="Back to observer dashboard">
+      <span class="back-arrow">×</span><span class="brand-avatar">🦉</span>
+      <span><strong id="interviewTitle">AI Interviewer</strong><small id="interviewCategory">Interview Practice</small></span>
+    </a>
+    <div class="session-status"><span class="status-dot"></span><span id="sessionStatus">Preparing your session</span></div>
+  </header>
+  <section class="candidate-onboarding" id="candidateOnboarding">
+    <p class="kicker">AI INTERVIEWER</p><h1>Get ready for your interview</h1>
+    <p class="onboarding-copy">Your observer has prepared a focused interview. Upload your resume, then allow camera and microphone access when you start.</p>
+    <p class="role-context" id="candidateRole">Waiting for observer session…</p>
+    <label class="resume-drop" for="resumeFile"><strong>Upload your resume</strong><span>PDF, Markdown, or TXT · up to 20 MB</span><input id="resumeFile" type="file" accept=".pdf,.md,.txt,text/plain,application/pdf"></label>
+    <p class="resume-status" id="resumeStatus">No resume uploaded</p>
+    <label class="candidate-name-field" id="candidateNameRow" for="candidateFirstName" hidden>
+      <strong>Enter your preferred first name</strong><span></span>
+      <input id="candidateFirstName" type="text" autocomplete="given-name" maxlength="61" placeholder="Preferred first name">
+    </label>
+    <button class="start-interview-button" id="startInterviewBtn" type="button" disabled>Start Interview</button>
+    <p class="onboarding-error" id="onboardingError" role="alert"></p>
+  </section>
+  <section id="activeInterview" hidden>
+    <section class="question-card" aria-labelledby="questionLabel">
+      <div class="question-number" id="questionNumber">1</div>
+      <div class="question-content">
+        <h1 id="questionLabel">Interview Question</h1><p id="questionText">Your interview question will appear here.</p>
+        <div class="attachment" aria-label="Text or code attachment">
+          <button id="openAttachmentBtn" type="button" aria-expanded="false" aria-controls="attachmentEditor">Attach text or code</button>
+          <p id="attachmentStatus" class="attachment-status" role="status" aria-live="polite" hidden></p>
+          <div id="attachmentEditor" class="attachment-editor" hidden>
+            <label for="attachmentText">Text or code to include with your spoken answer</label>
+            <textarea id="attachmentText" rows="8" spellcheck="false" placeholder="Paste or type text or code here. Line breaks and indentation are preserved."></textarea>
+            <div class="attachment-actions">
+              <button id="saveAttachmentBtn" type="button">Attach</button>
+              <button id="cancelAttachmentBtn" type="button">Cancel</button>
+            </div>
+          </div>
+          <div id="attachedPreview" class="attached-preview" hidden>
+            <pre id="attachedText"></pre>
+            <div class="attachment-actions">
+              <button id="editAttachmentBtn" type="button">Edit</button>
+              <button id="removeAttachmentBtn" type="button">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="video-card" aria-label="Camera preview">
+      <div class="video-stage">
+        <video id="cameraPreview" autoplay muted playsinline></video>
+        <div class="video-placeholder" id="videoPlaceholder">
+          <span class="camera-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8.5h3l1.5-2h3L13 8.5h3A2.5 2.5 0 0 1 18.5 11v5A2.5 2.5 0 0 1 16 18.5H4A2.5 2.5 0 0 1 1.5 16v-5A2.5 2.5 0 0 1 4 8.5Z"/><circle cx="10" cy="13.5" r="3"/><path d="m18.5 11 4-2v9l-4-2"/></svg></span>
+          <strong>Camera preview will appear here</strong><small>Allow camera and microphone access to begin.</small>
+        </div>
+        <span class="video-timer" id="videoTimer">00:00</span>
+        <span class="recording-badge" id="recordingBadge">SETUP</span>
+        <div id="candidateNotifications" class="candidate-notifications" role="log" aria-label="Answer and interviewer notifications" aria-live="polite" aria-relevant="additions"></div>
+      </div>
+      <div class="device-status"><span id="cameraStatus">Camera access required</span><span id="micStatus">Microphone access required</span></div>
+      <button class="record-button" id="voiceBtn" type="button" disabled><span class="record-dot" aria-hidden="true"></span><span id="voiceBtnLabel">Enable camera to begin</span></button>
+      <button class="end-button" id="candidateStopBtn" type="button" hidden>End interview</button>
+      <p class="video-note" id="videoNote">Camera and microphone are recorded only while you answer. Accepted answers are saved with the interview log.</p>
+    </section>
+    <section class="candidate-feedback" aria-label="Interview status">
+      <p id="candidateMessage" role="status" aria-live="polite">Click Start recording when you are ready to answer.</p>
+      <p id="candidateError" role="alert" hidden></p>
+      <div class="recovery-actions">
+        <button id="resumeInterviewBtn" type="button" hidden>Resume Interview</button>
+        <button id="retryDeviceBtn" type="button" hidden>Retry camera and microphone</button>
+        <button id="retryAnswerBtn" type="button" hidden>Retry answer</button>
+        <button id="recordAgainBtn" type="button" hidden>Record again</button>
+      </div>
+    </section>
+    <section class="history" aria-label="Interview conversation" hidden>
+      <button class="history-toggle" type="button" id="historyToggle">Conversation history <span>⌄</span></button>
+      <div class="chat-container" id="chat" aria-live="polite"></div>
+    </section>
+  </section>
+  <div id="audioPrompt" class="audio-prompt" hidden></div>
+</main>
+<script src="vendor/ort.wasm.min.js"></script>
+<script src="vendor/vad.bundle.min.js"></script>
+<script src="audioRecorder.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

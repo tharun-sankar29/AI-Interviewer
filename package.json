@@ -1,0 +1,13 @@
+{
+  "name": "ai-interviewer-browser-assets",
+  "private": true,
+  "scripts": {
+    "test:recovery": "node tests/browser_recovery.mjs",
+    "vendor:vad": "node scripts/copy_vad_assets.mjs",
+    "postinstall": "npm run vendor:vad"
+  },
+  "dependencies": {
+    "@ricky0123/vad-web": "0.0.29",
+    "onnxruntime-web": "1.22.0"
+  }
+}

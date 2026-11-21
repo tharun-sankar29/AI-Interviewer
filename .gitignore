@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+.python/
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+app.log
+:memory:.ses
+interview_logs/interview_*.json
+interview_logs/interview_*/
+output/*_analysis.txt
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Downloaded local inference models
+models/
+
+# Node dependencies (browser runtime assets are copied into frontend/vendor)
+node_modules/
+/frontend/vendor/
+
+# Local development
+.DS_Store
+Thumbs.db
